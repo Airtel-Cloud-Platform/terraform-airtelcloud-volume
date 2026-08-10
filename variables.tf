@@ -42,30 +42,30 @@ variable "availability_zone" {
   }
 }
 
-variable "vpc_id" {
-  description = "VPC ID"
+variable "vpc_name" {
+  description = "VPC NAME"
 
   type = string
 
   validation {
-    condition     = length(trim(var.vpc_id, " ")) > 0
-    error_message = "vpc_id cannot be empty."
+    condition     = length(trim(var.vpc_name, " ")) > 0
+    error_message = "vpc_name cannot be empty."
   }
 }
 
-variable "subnet_id" {
-  description = "Subnet ID"
+variable "subnet_name" {
+  description = "Subnet NAME"
 
   type = string
 
   validation {
-    condition     = length(trim(var.subnet_id, " ")) > 0
-    error_message = "subnet_id cannot be empty."
+    condition     = length(trim(var.subnet_name, " ")) > 0
+    error_message = "subnet_name cannot be empty."
   }
 }
 
-variable "compute_id" {
-  description = "Compute instance ID"
+variable "compute_name" {
+  description = "Compute instance NAME"
 
   type    = string
   default = null

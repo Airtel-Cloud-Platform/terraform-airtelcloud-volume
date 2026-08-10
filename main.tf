@@ -7,10 +7,10 @@ resource "airtelcloud_volume" "this" {
 
   availability_zone = var.availability_zone
 
-  vpc_id    = var.vpc_id
-  subnet_id = var.subnet_id
+  vpc_name    = var.vpc_name
+  subnet_name = var.subnet_name
 
-  compute_id = var.compute_id
+  compute_name = var.compute_name
 
   is_encrypted = var.is_encrypted
   bootable     = var.bootable

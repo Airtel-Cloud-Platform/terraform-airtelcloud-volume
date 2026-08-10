@@ -26,8 +26,8 @@ module "volume" {
 
   availability_zone = "S1"
 
-  vpc_id    = "vpc-id"
-  subnet_id = "subnet-id"
+  vpc_name    = "vpc-name"
+  subnet_name = "subnet-name"
 }
 ```
 
@@ -45,10 +45,10 @@ module "volume" {
 
   availability_zone = "S1"
 
-  vpc_id    = "vpc-id"
-  subnet_id = "subnet-id"
+  vpc_name    = "vpc-name"
+  subnet_name = "subnet-name"
 
-  compute_id = "compute-id"
+  compute_name = "compute-name"
 
   is_encrypted = true
 
@@ -66,9 +66,9 @@ module "volume" {
 | size | Volume size in GB | number | Yes |
 | type | Volume type | string | Yes |
 | availability_zone | Availability Zone | string | Yes |
-| vpc_id | VPC ID | string | Yes |
-| subnet_id | Subnet ID | string | Yes |
-| compute_id | Compute Instance ID | string | No |
+| vpc_name | VPC NAME | string | Yes |
+| subnet_name | Subnet NAME | string | Yes |
+| compute_name | Compute Instance NAME | string | No |
 | is_encrypted | Enable Volume Encryption | bool | No |
 | bootable | Whether volume is bootable | bool | No |
 | enable_backup | Enable Volume Backup | bool | No |
@@ -95,7 +95,7 @@ compute_id = null
 ### Attach Volume To VM
 
 ```hcl
-compute_id = module.vm.vm_id
+compute_name = module.vm.vm_name
 ```
 
 Changing `compute_id` detaches the volume from the current VM and attaches it to the new VM without recreating the volume.
