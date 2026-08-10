@@ -89,7 +89,7 @@ module "volume" {
 To create a volume without attaching it to a VM:
 
 ```hcl
-compute_id = null
+compute_name = null
 ```
 
 ### Attach Volume To VM
@@ -98,11 +98,11 @@ compute_id = null
 compute_name = module.vm.vm_name
 ```
 
-Changing `compute_id` detaches the volume from the current VM and attaches it to the new VM without recreating the volume.
+Changing `compute_name` detaches the volume from the current VM and attaches it to the new VM without recreating the volume.
 
 ## Requirements
 
 | Name | Version |
 |------|---------|
 | Terraform | >= 1.5 |
-| airtelcloud Provider | >= 1.0.4 |
+| airtelcloud Provider | >= 1.1.3 |
