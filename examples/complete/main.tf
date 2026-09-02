@@ -9,10 +9,10 @@ module "volume" {
 
   availability_zone = "S1"
 
-  vpc_id    = "vpc-id"
-  subnet_id = "subnet-id"
+  vpc_name    = "vpc-name"
+  subnet_name = "subnet-name"
 
-  compute_id = "compute-id"
+  compute_name = "compute-name"
 
   is_encrypted = true
 
