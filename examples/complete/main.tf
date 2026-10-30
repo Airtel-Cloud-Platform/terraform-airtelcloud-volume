@@ -1,5 +1,5 @@
 module "volume" {
-  source = "Airtel-Cloud-Platform/volume/airtelcloud"
+  source = "../../"
 
   name = "application-data-volume"
 
@@ -19,4 +19,10 @@ module "volume" {
   bootable = false
 
   enable_backup = true
+
+  labels = ["env:production", "team:platform"]
+}
+
+output "volume" {
+  value = module.volume.volume
 }
