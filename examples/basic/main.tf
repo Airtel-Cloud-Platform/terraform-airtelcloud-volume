@@ -1,5 +1,5 @@
 module "volume" {
-  source = "Airtel-Cloud-Platform/volume/airtelcloud"
+  source = "../../"
 
   name = "data-volume"
 
@@ -11,4 +11,8 @@ module "volume" {
 
   vpc_name    = "vpc-name"
   subnet_name = "subnet-name"
+}
+
+output "volume_id" {
+  value = module.volume.volume_id
 }

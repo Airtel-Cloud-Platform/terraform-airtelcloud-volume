@@ -16,4 +16,6 @@ resource "airtelcloud_volume" "this" {
   bootable     = var.bootable
 
   enable_backup = var.enable_backup
+
+  labels = var.labels
 }
